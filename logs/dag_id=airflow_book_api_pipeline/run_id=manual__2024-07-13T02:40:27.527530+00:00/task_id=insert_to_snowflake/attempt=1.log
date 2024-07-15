@@ -1,0 +1,141 @@
+[2024-07-13T02:40:39.774+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-13T02:40:39.817+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: airflow_book_api_pipeline.insert_to_snowflake manual__2024-07-13T02:40:27.527530+00:00 [queued]>
+[2024-07-13T02:40:39.828+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: airflow_book_api_pipeline.insert_to_snowflake manual__2024-07-13T02:40:27.527530+00:00 [queued]>
+[2024-07-13T02:40:39.829+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-07-13T02:40:39.859+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): insert_to_snowflake> on 2024-07-13 02:40:27.527530+00:00
+[2024-07-13T02:40:39.870+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=1069) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-07-13T02:40:39.872+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', '***_book_api_pipeline', 'insert_to_snowflake', 'manual__2024-07-13T02:40:27.527530+00:00', '--job-id', '32', '--raw', '--subdir', 'DAGS_FOLDER/***_book_api_dags.py', '--cfg-path', '/tmp/tmpft06amdu']
+[2024-07-13T02:40:39.877+0000] {standard_task_runner.py:63} INFO - Started process 1071 to run task
+[2024-07-13T02:40:39.877+0000] {standard_task_runner.py:91} INFO - Job 32: Subtask insert_to_snowflake
+[2024-07-13T02:40:39.952+0000] {task_command.py:426} INFO - Running <TaskInstance: airflow_book_api_pipeline.insert_to_snowflake manual__2024-07-13T02:40:27.527530+00:00 [running]> on host e6b306b9c204
+[2024-07-13T02:40:40.082+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='zainal' AIRFLOW_CTX_DAG_ID='***_book_api_pipeline' AIRFLOW_CTX_TASK_ID='insert_to_snowflake' AIRFLOW_CTX_EXECUTION_DATE='2024-07-13T02:40:27.527530+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-07-13T02:40:27.527530+00:00'
+[2024-07-13T02:40:40.084+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-13T02:40:40.114+0000] {base.py:84} INFO - Using connection ID 'snowflake-conn' for task execution.
+[2024-07-13T02:40:40.115+0000] {connection.py:399} INFO - Snowflake Connector for Python Version: 3.10.1, Python Version: 3.12.4, Platform: Linux-6.5.0-1022-azure-x86_64-with-glibc2.36
+[2024-07-13T02:40:40.116+0000] {connection.py:1239} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2024-07-13T02:40:40.604+0000] {cursor.py:1149} INFO - Number of results in first chunk: 1
+[2024-07-13T02:40:40.604+0000] {sql.py:487} INFO - Running statement: INSERT INTO PROJECTS_DB.PUBLIC.book_table (title, author, publish_date) VALUES (%s, %s, %s), parameters: ['Frankenstein or The Modern Prometheus', 'Mary Shelley', 1818]
+[2024-07-13T02:40:42.786+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-07-13T02:40:42.786+0000] {snowflake.py:410} INFO - Rows affected: 1
+[2024-07-13T02:40:42.787+0000] {snowflake.py:411} INFO - Snowflake query id: 01b5a1c0-0000-c78a-0001-1bbe0002a28a
+[2024-07-13T02:40:42.974+0000] {cursor.py:1149} INFO - Number of results in first chunk: 1
+[2024-07-13T02:40:42.974+0000] {connection.py:762} INFO - closed
+[2024-07-13T02:40:42.992+0000] {connection.py:768} INFO - No async queries seem to be running, deleting session
+[2024-07-13T02:40:43.016+0000] {connection.py:399} INFO - Snowflake Connector for Python Version: 3.10.1, Python Version: 3.12.4, Platform: Linux-6.5.0-1022-azure-x86_64-with-glibc2.36
+[2024-07-13T02:40:43.016+0000] {connection.py:1239} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2024-07-13T02:40:43.322+0000] {cursor.py:1149} INFO - Number of results in first chunk: 1
+[2024-07-13T02:40:43.323+0000] {sql.py:487} INFO - Running statement: INSERT INTO PROJECTS_DB.PUBLIC.book_table (title, author, publish_date) VALUES (%s, %s, %s), parameters: ['Brave New World', 'Aldous Huxley', 1932]
+[2024-07-13T02:40:44.363+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-07-13T02:40:44.363+0000] {snowflake.py:410} INFO - Rows affected: 1
+[2024-07-13T02:40:44.364+0000] {snowflake.py:411} INFO - Snowflake query id: 01b5a1c0-0000-c766-0001-1bbe0002b2c2
+[2024-07-13T02:40:44.604+0000] {cursor.py:1149} INFO - Number of results in first chunk: 1
+[2024-07-13T02:40:44.604+0000] {connection.py:762} INFO - closed
+[2024-07-13T02:40:44.625+0000] {connection.py:768} INFO - No async queries seem to be running, deleting session
+[2024-07-13T02:40:44.654+0000] {connection.py:399} INFO - Snowflake Connector for Python Version: 3.10.1, Python Version: 3.12.4, Platform: Linux-6.5.0-1022-azure-x86_64-with-glibc2.36
+[2024-07-13T02:40:44.655+0000] {connection.py:1239} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2024-07-13T02:40:44.974+0000] {cursor.py:1149} INFO - Number of results in first chunk: 1
+[2024-07-13T02:40:44.975+0000] {sql.py:487} INFO - Running statement: INSERT INTO PROJECTS_DB.PUBLIC.book_table (title, author, publish_date) VALUES (%s, %s, %s), parameters: ['The Invisible Man', 'H. G. Wells', 1897]
+[2024-07-13T02:40:45.670+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-07-13T02:40:45.671+0000] {snowflake.py:410} INFO - Rows affected: 1
+[2024-07-13T02:40:45.671+0000] {snowflake.py:411} INFO - Snowflake query id: 01b5a1c0-0000-c766-0001-1bbe0002b2ce
+[2024-07-13T02:40:45.880+0000] {cursor.py:1149} INFO - Number of results in first chunk: 1
+[2024-07-13T02:40:45.880+0000] {connection.py:762} INFO - closed
+[2024-07-13T02:40:45.903+0000] {connection.py:768} INFO - No async queries seem to be running, deleting session
+[2024-07-13T02:40:45.931+0000] {connection.py:399} INFO - Snowflake Connector for Python Version: 3.10.1, Python Version: 3.12.4, Platform: Linux-6.5.0-1022-azure-x86_64-with-glibc2.36
+[2024-07-13T02:40:45.932+0000] {connection.py:1239} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2024-07-13T02:40:46.284+0000] {cursor.py:1149} INFO - Number of results in first chunk: 1
+[2024-07-13T02:40:46.284+0000] {sql.py:487} INFO - Running statement: INSERT INTO PROJECTS_DB.PUBLIC.book_table (title, author, publish_date) VALUES (%s, %s, %s), parameters: ['On the Nature of the Universe', 'Titus Lucretius Carus', 1486]
+[2024-07-13T02:40:46.772+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-07-13T02:40:46.772+0000] {snowflake.py:410} INFO - Rows affected: 1
+[2024-07-13T02:40:46.772+0000] {snowflake.py:411} INFO - Snowflake query id: 01b5a1c0-0000-c78a-0001-1bbe0002a296
+[2024-07-13T02:40:46.973+0000] {cursor.py:1149} INFO - Number of results in first chunk: 1
+[2024-07-13T02:40:46.974+0000] {connection.py:762} INFO - closed
+[2024-07-13T02:40:46.993+0000] {connection.py:768} INFO - No async queries seem to be running, deleting session
+[2024-07-13T02:40:47.022+0000] {connection.py:399} INFO - Snowflake Connector for Python Version: 3.10.1, Python Version: 3.12.4, Platform: Linux-6.5.0-1022-azure-x86_64-with-glibc2.36
+[2024-07-13T02:40:47.024+0000] {connection.py:1239} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2024-07-13T02:40:47.416+0000] {cursor.py:1149} INFO - Number of results in first chunk: 1
+[2024-07-13T02:40:47.417+0000] {sql.py:487} INFO - Running statement: INSERT INTO PROJECTS_DB.PUBLIC.book_table (title, author, publish_date) VALUES (%s, %s, %s), parameters: ['Houghton Mifflin Science California', 'Houghton Mifflin Company Staff', 2006]
+[2024-07-13T02:40:47.885+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-07-13T02:40:47.885+0000] {snowflake.py:410} INFO - Rows affected: 1
+[2024-07-13T02:40:47.886+0000] {snowflake.py:411} INFO - Snowflake query id: 01b5a1c0-0000-c78a-0001-1bbe0002a29e
+[2024-07-13T02:40:48.084+0000] {cursor.py:1149} INFO - Number of results in first chunk: 1
+[2024-07-13T02:40:48.085+0000] {connection.py:762} INFO - closed
+[2024-07-13T02:40:48.104+0000] {connection.py:768} INFO - No async queries seem to be running, deleting session
+[2024-07-13T02:40:48.131+0000] {connection.py:399} INFO - Snowflake Connector for Python Version: 3.10.1, Python Version: 3.12.4, Platform: Linux-6.5.0-1022-azure-x86_64-with-glibc2.36
+[2024-07-13T02:40:48.132+0000] {connection.py:1239} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2024-07-13T02:40:48.444+0000] {cursor.py:1149} INFO - Number of results in first chunk: 1
+[2024-07-13T02:40:48.445+0000] {sql.py:487} INFO - Running statement: INSERT INTO PROJECTS_DB.PUBLIC.book_table (title, author, publish_date) VALUES (%s, %s, %s), parameters: ['Le Tour du Monde en Quatre-Vingts Jours', 'Jules Verne', 1873]
+[2024-07-13T02:40:48.900+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-07-13T02:40:48.900+0000] {snowflake.py:410} INFO - Rows affected: 1
+[2024-07-13T02:40:48.901+0000] {snowflake.py:411} INFO - Snowflake query id: 01b5a1c0-0000-c766-0001-1bbe0002b2de
+[2024-07-13T02:40:49.094+0000] {cursor.py:1149} INFO - Number of results in first chunk: 1
+[2024-07-13T02:40:49.094+0000] {connection.py:762} INFO - closed
+[2024-07-13T02:40:49.114+0000] {connection.py:768} INFO - No async queries seem to be running, deleting session
+[2024-07-13T02:40:49.139+0000] {connection.py:399} INFO - Snowflake Connector for Python Version: 3.10.1, Python Version: 3.12.4, Platform: Linux-6.5.0-1022-azure-x86_64-with-glibc2.36
+[2024-07-13T02:40:49.140+0000] {connection.py:1239} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2024-07-13T02:40:49.412+0000] {cursor.py:1149} INFO - Number of results in first chunk: 1
+[2024-07-13T02:40:49.413+0000] {sql.py:487} INFO - Running statement: INSERT INTO PROJECTS_DB.PUBLIC.book_table (title, author, publish_date) VALUES (%s, %s, %s), parameters: ['History', 'Herodotus', 1494]
+[2024-07-13T02:40:50.131+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-07-13T02:40:50.131+0000] {snowflake.py:410} INFO - Rows affected: 1
+[2024-07-13T02:40:50.131+0000] {snowflake.py:411} INFO - Snowflake query id: 01b5a1c0-0000-c766-0001-1bbe0002b2e6
+[2024-07-13T02:40:50.329+0000] {cursor.py:1149} INFO - Number of results in first chunk: 1
+[2024-07-13T02:40:50.330+0000] {connection.py:762} INFO - closed
+[2024-07-13T02:40:50.347+0000] {connection.py:768} INFO - No async queries seem to be running, deleting session
+[2024-07-13T02:40:50.371+0000] {connection.py:399} INFO - Snowflake Connector for Python Version: 3.10.1, Python Version: 3.12.4, Platform: Linux-6.5.0-1022-azure-x86_64-with-glibc2.36
+[2024-07-13T02:40:50.371+0000] {connection.py:1239} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2024-07-13T02:40:50.934+0000] {cursor.py:1149} INFO - Number of results in first chunk: 1
+[2024-07-13T02:40:50.934+0000] {sql.py:487} INFO - Running statement: INSERT INTO PROJECTS_DB.PUBLIC.book_table (title, author, publish_date) VALUES (%s, %s, %s), parameters: ['Houghton Mifflin Science Leveled Readers', 'Houghton Mifflin Company Staff', 2005]
+[2024-07-13T02:40:51.397+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-07-13T02:40:51.398+0000] {snowflake.py:410} INFO - Rows affected: 1
+[2024-07-13T02:40:51.398+0000] {snowflake.py:411} INFO - Snowflake query id: 01b5a1c0-0000-c78a-0001-1bbe0002a2aa
+[2024-07-13T02:40:51.605+0000] {cursor.py:1149} INFO - Number of results in first chunk: 1
+[2024-07-13T02:40:51.605+0000] {connection.py:762} INFO - closed
+[2024-07-13T02:40:51.626+0000] {connection.py:768} INFO - No async queries seem to be running, deleting session
+[2024-07-13T02:40:51.651+0000] {connection.py:399} INFO - Snowflake Connector for Python Version: 3.10.1, Python Version: 3.12.4, Platform: Linux-6.5.0-1022-azure-x86_64-with-glibc2.36
+[2024-07-13T02:40:51.651+0000] {connection.py:1239} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2024-07-13T02:40:51.840+0000] {cursor.py:1149} INFO - Number of results in first chunk: 1
+[2024-07-13T02:40:51.841+0000] {sql.py:487} INFO - Running statement: INSERT INTO PROJECTS_DB.PUBLIC.book_table (title, author, publish_date) VALUES (%s, %s, %s), parameters: ['[William Wheeler Hubbell, authorized to apply for patents.]', 'United States. Congress. Senate. Committee on Patents', 1858]
+[2024-07-13T02:40:52.259+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-07-13T02:40:52.259+0000] {snowflake.py:410} INFO - Rows affected: 1
+[2024-07-13T02:40:52.259+0000] {snowflake.py:411} INFO - Snowflake query id: 01b5a1c0-0000-c766-0001-1bbe0002b2ee
+[2024-07-13T02:40:52.449+0000] {cursor.py:1149} INFO - Number of results in first chunk: 1
+[2024-07-13T02:40:52.449+0000] {connection.py:762} INFO - closed
+[2024-07-13T02:40:52.466+0000] {connection.py:768} INFO - No async queries seem to be running, deleting session
+[2024-07-13T02:40:52.493+0000] {connection.py:399} INFO - Snowflake Connector for Python Version: 3.10.1, Python Version: 3.12.4, Platform: Linux-6.5.0-1022-azure-x86_64-with-glibc2.36
+[2024-07-13T02:40:52.494+0000] {connection.py:1239} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2024-07-13T02:40:52.885+0000] {cursor.py:1149} INFO - Number of results in first chunk: 1
+[2024-07-13T02:40:52.885+0000] {sql.py:487} INFO - Running statement: INSERT INTO PROJECTS_DB.PUBLIC.book_table (title, author, publish_date) VALUES (%s, %s, %s), parameters: ['The Island of Dr. Moreau', 'H. G. Wells', 1896]
+[2024-07-13T02:40:53.392+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-07-13T02:40:53.393+0000] {snowflake.py:410} INFO - Rows affected: 1
+[2024-07-13T02:40:53.393+0000] {snowflake.py:411} INFO - Snowflake query id: 01b5a1c0-0000-c78a-0001-1bbe0002a2b6
+[2024-07-13T02:40:53.597+0000] {cursor.py:1149} INFO - Number of results in first chunk: 1
+[2024-07-13T02:40:53.598+0000] {connection.py:762} INFO - closed
+[2024-07-13T02:40:53.616+0000] {connection.py:768} INFO - No async queries seem to be running, deleting session
+[2024-07-13T02:40:53.641+0000] {connection.py:399} INFO - Snowflake Connector for Python Version: 3.10.1, Python Version: 3.12.4, Platform: Linux-6.5.0-1022-azure-x86_64-with-glibc2.36
+[2024-07-13T02:40:53.642+0000] {connection.py:1239} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2024-07-13T02:40:53.874+0000] {cursor.py:1149} INFO - Number of results in first chunk: 1
+[2024-07-13T02:40:53.874+0000] {sql.py:487} INFO - Running statement: INSERT INTO PROJECTS_DB.PUBLIC.book_table (title, author, publish_date) VALUES (%s, %s, %s), parameters: ['The principall navigations, voiages, and discoveries of the English nations', 'Richard Hakluyt', 1589]
+[2024-07-13T02:40:54.386+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-07-13T02:40:54.386+0000] {snowflake.py:410} INFO - Rows affected: 1
+[2024-07-13T02:40:54.386+0000] {snowflake.py:411} INFO - Snowflake query id: 01b5a1c0-0000-c78a-0001-1bbe0002a2be
+[2024-07-13T02:40:54.583+0000] {cursor.py:1149} INFO - Number of results in first chunk: 1
+[2024-07-13T02:40:54.584+0000] {connection.py:762} INFO - closed
+[2024-07-13T02:40:54.614+0000] {connection.py:768} INFO - No async queries seem to be running, deleting session
+[2024-07-13T02:40:54.643+0000] {connection.py:399} INFO - Snowflake Connector for Python Version: 3.10.1, Python Version: 3.12.4, Platform: Linux-6.5.0-1022-azure-x86_64-with-glibc2.36
+[2024-07-13T02:40:54.644+0000] {connection.py:1239} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2024-07-13T02:40:54.849+0000] {cursor.py:1149} INFO - Number of results in first chunk: 1
+[2024-07-13T02:40:54.850+0000] {sql.py:487} INFO - Running statement: INSERT INTO PROJECTS_DB.PUBLIC.book_table (title, author, publish_date) VALUES (%s, %s, %s), parameters: ['On the origin of species by means of natural selection', 'Charles Darwin', 1859]
+[2024-07-13T02:40:55.517+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-07-13T02:40:55.517+0000] {snowflake.py:410} INFO - Rows affected: 1
+[2024-07-13T02:40:55.518+0000] {snowflake.py:411} INFO - Snowflake query id: 01b5a1c0-0000-c766-0001-1bbe0002b2fe
+[2024-07-13T02:40:55.718+0000] {cursor.py:1149} INFO - Number of results in first chunk: 1
+[2024-07-13T02:40:55.719+0000] {connection.py:762} INFO - closed
+[2024-07-13T02:40:55.741+0000] {connection.py:768} INFO - No async queries seem to be running, deleting session
+[2024-07-13T02:40:55.767+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-07-13T02:40:55.768+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-13T02:40:55.779+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=***_book_api_pipeline, task_id=insert_to_snowflake, run_id=manual__2024-07-13T02:40:27.527530+00:00, execution_date=20240713T024027, start_date=20240713T024039, end_date=20240713T024055
+[2024-07-13T02:40:55.833+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-07-13T02:40:55.851+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-13T02:40:55.858+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
