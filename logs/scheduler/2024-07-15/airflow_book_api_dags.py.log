@@ -61,3 +61,45 @@
 [2024-07-15T15:04:45.765+0000] {logging_mixin.py:188} INFO - [2024-07-15T15:04:45.764+0000] {dag.py:3096} INFO - Sync 1 DAGs
 [2024-07-15T15:04:45.788+0000] {logging_mixin.py:188} INFO - [2024-07-15T15:04:45.788+0000] {dag.py:3954} INFO - Setting next_dagrun for airflow_book_api_pipeline to 2024-07-15 00:00:00+00:00, run_after=2024-07-16 00:00:00+00:00
 [2024-07-15T15:04:45.811+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/airflow_book_api_dags.py took 0.085 seconds
+[2024-07-15T15:05:16.401+0000] {processor.py:161} INFO - Started process (PID=553) to work on /opt/airflow/dags/airflow_book_api_dags.py
+[2024-07-15T15:05:16.402+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/airflow_book_api_dags.py for tasks to queue
+[2024-07-15T15:05:16.404+0000] {logging_mixin.py:188} INFO - [2024-07-15T15:05:16.404+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/airflow_book_api_dags.py
+[2024-07-15T15:05:16.409+0000] {processor.py:840} INFO - DAG(s) 'airflow_book_api_pipeline' retrieved from /opt/airflow/dags/airflow_book_api_dags.py
+[2024-07-15T15:05:16.432+0000] {logging_mixin.py:188} INFO - [2024-07-15T15:05:16.432+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-15T15:05:16.455+0000] {logging_mixin.py:188} INFO - [2024-07-15T15:05:16.455+0000] {dag.py:3954} INFO - Setting next_dagrun for airflow_book_api_pipeline to 2024-07-15 00:00:00+00:00, run_after=2024-07-16 00:00:00+00:00
+[2024-07-15T15:05:16.476+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/airflow_book_api_dags.py took 0.080 seconds
+[2024-07-15T15:05:47.405+0000] {processor.py:161} INFO - Started process (PID=611) to work on /opt/airflow/dags/airflow_book_api_dags.py
+[2024-07-15T15:05:47.409+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/airflow_book_api_dags.py for tasks to queue
+[2024-07-15T15:05:47.411+0000] {logging_mixin.py:188} INFO - [2024-07-15T15:05:47.411+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/airflow_book_api_dags.py
+[2024-07-15T15:05:47.419+0000] {processor.py:840} INFO - DAG(s) 'airflow_book_api_pipeline' retrieved from /opt/airflow/dags/airflow_book_api_dags.py
+[2024-07-15T15:05:47.440+0000] {logging_mixin.py:188} INFO - [2024-07-15T15:05:47.440+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-15T15:05:47.462+0000] {logging_mixin.py:188} INFO - [2024-07-15T15:05:47.462+0000] {dag.py:3954} INFO - Setting next_dagrun for airflow_book_api_pipeline to 2024-07-15 00:00:00+00:00, run_after=2024-07-16 00:00:00+00:00
+[2024-07-15T15:05:47.483+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/airflow_book_api_dags.py took 0.083 seconds
+[2024-07-15T15:06:17.803+0000] {processor.py:161} INFO - Started process (PID=669) to work on /opt/airflow/dags/airflow_book_api_dags.py
+[2024-07-15T15:06:17.815+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/airflow_book_api_dags.py for tasks to queue
+[2024-07-15T15:06:17.817+0000] {logging_mixin.py:188} INFO - [2024-07-15T15:06:17.817+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/airflow_book_api_dags.py
+[2024-07-15T15:06:17.823+0000] {processor.py:840} INFO - DAG(s) 'airflow_book_api_pipeline' retrieved from /opt/airflow/dags/airflow_book_api_dags.py
+[2024-07-15T15:06:17.873+0000] {logging_mixin.py:188} INFO - [2024-07-15T15:06:17.872+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-15T15:06:17.923+0000] {logging_mixin.py:188} INFO - [2024-07-15T15:06:17.923+0000] {dag.py:3954} INFO - Setting next_dagrun for airflow_book_api_pipeline to 2024-07-15 00:00:00+00:00, run_after=2024-07-16 00:00:00+00:00
+[2024-07-15T15:06:17.961+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/airflow_book_api_dags.py took 0.164 seconds
+[2024-07-15T15:06:48.774+0000] {processor.py:161} INFO - Started process (PID=727) to work on /opt/airflow/dags/airflow_book_api_dags.py
+[2024-07-15T15:06:48.776+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/airflow_book_api_dags.py for tasks to queue
+[2024-07-15T15:06:48.778+0000] {logging_mixin.py:188} INFO - [2024-07-15T15:06:48.777+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/airflow_book_api_dags.py
+[2024-07-15T15:06:48.794+0000] {processor.py:840} INFO - DAG(s) 'airflow_book_api_pipeline' retrieved from /opt/airflow/dags/airflow_book_api_dags.py
+[2024-07-15T15:06:48.834+0000] {logging_mixin.py:188} INFO - [2024-07-15T15:06:48.834+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-15T15:06:48.880+0000] {logging_mixin.py:188} INFO - [2024-07-15T15:06:48.880+0000] {dag.py:3954} INFO - Setting next_dagrun for airflow_book_api_pipeline to 2024-07-15 00:00:00+00:00, run_after=2024-07-16 00:00:00+00:00
+[2024-07-15T15:06:48.916+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/airflow_book_api_dags.py took 0.160 seconds
+[2024-07-15T15:07:19.739+0000] {processor.py:161} INFO - Started process (PID=785) to work on /opt/airflow/dags/airflow_book_api_dags.py
+[2024-07-15T15:07:19.740+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/airflow_book_api_dags.py for tasks to queue
+[2024-07-15T15:07:19.742+0000] {logging_mixin.py:188} INFO - [2024-07-15T15:07:19.742+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/airflow_book_api_dags.py
+[2024-07-15T15:07:19.747+0000] {processor.py:840} INFO - DAG(s) 'airflow_book_api_pipeline' retrieved from /opt/airflow/dags/airflow_book_api_dags.py
+[2024-07-15T15:07:19.770+0000] {logging_mixin.py:188} INFO - [2024-07-15T15:07:19.769+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-15T15:07:19.793+0000] {logging_mixin.py:188} INFO - [2024-07-15T15:07:19.793+0000] {dag.py:3954} INFO - Setting next_dagrun for airflow_book_api_pipeline to 2024-07-15 00:00:00+00:00, run_after=2024-07-16 00:00:00+00:00
+[2024-07-15T15:07:19.814+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/airflow_book_api_dags.py took 0.080 seconds
+[2024-07-15T15:07:50.265+0000] {processor.py:161} INFO - Started process (PID=843) to work on /opt/airflow/dags/airflow_book_api_dags.py
+[2024-07-15T15:07:50.266+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/airflow_book_api_dags.py for tasks to queue
+[2024-07-15T15:07:50.268+0000] {logging_mixin.py:188} INFO - [2024-07-15T15:07:50.267+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/airflow_book_api_dags.py
+[2024-07-15T15:07:50.285+0000] {processor.py:840} INFO - DAG(s) 'airflow_book_api_pipeline' retrieved from /opt/airflow/dags/airflow_book_api_dags.py
+[2024-07-15T15:07:50.312+0000] {logging_mixin.py:188} INFO - [2024-07-15T15:07:50.311+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-15T15:07:50.337+0000] {logging_mixin.py:188} INFO - [2024-07-15T15:07:50.337+0000] {dag.py:3954} INFO - Setting next_dagrun for airflow_book_api_pipeline to 2024-07-15 00:00:00+00:00, run_after=2024-07-16 00:00:00+00:00
+[2024-07-15T15:07:50.366+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/airflow_book_api_dags.py took 0.106 seconds
